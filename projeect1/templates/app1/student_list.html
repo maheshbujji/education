@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+{% load staticfiles %}
+<body style="background:url({% static "mahe/mahesh.jpeg" %}" >
+<table align="right" border="2" style="width: 500px" bgcolor="#7fff00">
+    <tr>
+        <td><a href="/register/"><h3 style="background:#fb0000" align="center">Home</h3></a> </td>
+        <td><a href="/maheshg/"><h3 style="background: #fb0000" align="center"> Faculty</h3></a></td>
+        <td><a href=""><h3 style="background: #fb0000" align="center"> Marks</h3></a></td>
+    </tr>
+</table>
+
+{% if object_list %}
+<table align="center" border="2">
+    <tr>
+        <td bgcolor="#7fff00">First Name</td>
+        <td bgcolor="#ffd700">Last Name</td>
+        <td bgcolor="#7fff00">Phone No:</td>
+        <td bgcolor="#00ced1">Email Id:</td>
+        <td bgcolor="#daa520">Class</td>
+        <td bgcolor="#faebd7">User Password</td>
+        <td bgcolor="#f5f5dc">Delete</td>
+        <td bgcolor="#ffebcd">Update</td>
+    </tr>
+
+{% for x in object_list %}
+    <tr>
+   <td bgcolor="#7fff00">{{ x.fname }}</td>
+    <td bgcolor="#ffd700">{{ x.lname }}</td>
+    <td bgcolor="#ffd700">{{ x.cno }}</td>
+    <td bgcolor="#00ced1">{{ x.email }}</td>
+    <td bgcolor="#9400d3">{{ x.clas }}</td>
+    <td bgcolor="#faebd7">{{ x.upass}}</td>
+    <td bgcolor="black">
+        <form action="/delete/{{ x.email }}/" method="post">
+            {% csrf_token %}
+            <input type="submit" value="Delete">
+        </form>
+    </td>
+    <td bgcolor="#7fff00">
+        <a href="/update/{{ x.email }}">Update</a>
+    </td>
+    </tr>
+
+{% endfor %}
+</table>
+{% else %}
+    <h2>No Details Found</h2>
+{% endif %}
+
+<table align="right" border="2">
+<form action="/ramu/" method="post">
+   {% csrf_token %}
+
+<input type="text" placeholder="search" name="h1">
+<input type="submit" value="search">
+     </form>
+                </table>
+{% if cc %}
+    <table align="center" border="2">
+    <tr>
+    <td bgcolor="#9400d3">{{ cc.fname }}</td>
+    <td bgcolor="#9400d3">{{ cc.lname }}</td>
+    <td bgcolor="#9400d3">{{ cc.clas }}</td>
+    <td bgcolor="#9400d3">{{ cc.gender }}</td>
+    <td bgcolor="#9400d3">{{ cc.email }}</td>
+    <td bgcolor="#9400d3">{{ cc.uname }}</td>
+    <td bgcolor="#9400d3">{{ cc.upass }}</td>
+    </tr>
+{% endif %}
+{{ ma }}
+</table>
+
+</body>
+</html>

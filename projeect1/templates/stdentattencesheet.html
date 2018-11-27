@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/saveattendenc/" method="post">
+    {% csrf_token %}
+
+    <table align="center" border="2">
+        <tr>
+            <td bgcolor="#7fff00">
+                <input type="text" name="name" placeholder="name" required>
+            </td>
+
+        </tr>
+        <tr>
+            <td bgcolor="#9400d3">
+                            <input type="text" name="s1" placeholder="jan1" required>
+
+            </td>
+        </tr> <tr>
+        <td bgcolor="#dc143c">
+                        <input type="text" name="s1" placeholder="feb2" required>
+
+        </td>
+        </tr> <tr>
+        <td bgcolor="#f5f5dc">
+                        <input type="text" name="s1" placeholder="mar3" required>
+
+        </td>
+        </tr> <tr>
+        <td bgcolor="black">
+                        <input type="text" name="s1" placeholder="apr4" required>
+
+        </td>
+        </tr> <tr>
+        <td bgcolor="#ffd700">
+                        <input type="text" name="s1" placeholder="may5" required>
+
+        </td>
+        </tr> <tr>
+        <td bgcolor="#daa520">
+                        <input type="text" name="s1" placeholder="jun6" required>
+
+        </td>
+        </tr> <tr>
+        <td bgcolor="#7b68ee">
+                       <input type="text" name="s1" placeholder="july7" required>
+
+        </td>
+        </tr> <tr>
+        <td bgcolor="#d2691e">
+                        <input type="text" name="s1" placeholder="aug8" required>
+
+        </td>
+        </tr> <tr>
+        <td bgcolor="#9400d3">
+                        <input type="text" name="s1" placeholder="sep9" required>
+
+        </td>
+        </tr> <tr>
+        <td bgcolor="#a52a2a">
+                       <input type="text" name="s1" placeholder="oct10" required>
+
+        </td>
+        </tr> <tr>
+        <td bgcolor="#00ffff">
+                        <input type="text" name="s1" placeholder="nov11" required>
+
+        </td>
+        </tr> <tr>
+        <td bgcolor="#4682b4">
+                        <input type="text" name="s1" placeholder="dec12" required>
+
+        </td>
+        </tr>
+        <td align="center" bgcolor="#00ffff" >
+            <input type="submit" value="save">
+        </td>
+        {{ mas }}
+    </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>CodePen - Login </title>
+    {% load staticfiles %}
+
+  <link rel="stylesheet" href="{% static 'student/css/reset.css' %}">
+
+    <link rel="stylesheet" href="{% static 'student/css/style.css' %}" media="screen" type="text/css" />
+
+</head>
+
+<body>
+        <td><a href="/register/"><h5 style="background:#fb0000" align="center">Home</h5></a> </td>
+
+<form action="/loginstudent/" method="post">
+    {% csrf_token %}
+
+  <div class="wrap">
+		<div class="avatar">
+      <img src="{% static 'student/dhoni.jpg' %}">
+		</div>
+		<input type="text" placeholder="username" name="studentname" required>
+		<div class="bar">
+			<i></i>
+		</div>
+		<input type="password" placeholder="password" name="studentpassword" required>
+		<a href="" class="forgot_link">forgot ?</a>
+		<button>Sign in</button>
+	</div>
+  <div class="wrap">
+
+
+		<input type="text" value="{{ masg }}" >
+	</div>
+
+  <script src="{% static 'student/js/index.js' %}"></script>
+    </form>
+
+</body>
+
+</html>

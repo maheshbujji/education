@@ -1,0 +1,133 @@
+<!--A Design by W3layouts 
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!doctype html>
+<html>
+
+<head>
+	<title>Student Registration Form Flat Responsive widget Template :: w3layouts</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Student Registration Form Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design"
+	/>
+
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- fonts -->
+	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
+	<!-- /fonts -->
+	<!-- css -->
+    {% load staticfiles %}
+	<link href="{% static 'mahi/css/bootstrap.css' %}" rel="stylesheet" type='text/css' media="all" />
+	<link href="{% static 'mahi/css/style.css' %}" rel="stylesheet" type='text/css' media="all" />
+	<!-- /css -->
+</head>
+
+<body>
+<table align="center" border="2" >
+        <tr bgcolor="#9400d3">
+            <td style="width: 160px"bgcolor="#dc143c" ><a href="/views/"><h1>Students List</h1></a></td>
+            <td style="width: 100px" bgcolor="#dc143c"><a href="/maheshg/"><h1> Faculty</h1></a></td>
+            <td style="width: 170px" bgcolor="#dc143c"><a href="/viewsfaculty/"><h1>Faculty Details</h1></a> </td>
+            <td style="width: 170px" bgcolor="#dc143c"><a href="/library/"><h1>Library Books</h1></a> </td>
+            <td style="width: 170px" bgcolor="#dc143c"><a href="/attendenc/"><h1>AttendenceSheetes</h1></a> </td>
+            <td style="width: 170px" bgcolor="#dc143c"><a href="/Suggestions/"><h1>Suggestions</h1></a> </td>
+            <td style="width: 170px" bgcolor="#dc143c"><a href="/studentlogin/"><h1>Student Login</h1></a> </td>
+            <td style="width: 170px" bgcolor="#dc143c"><a href="/report/"><h1>Reports</h1></a> </td>
+
+            <td style="width: 170px" bgcolor="#dc143c"><a href="/login/"><h1>Logout</h1></a> </td>
+        </tr>
+    </table>
+	<div class="content-agileits">
+		<h1 class="title">student registration Form</h1>
+		<div class="left">
+			<form action="/mahesh/" method="post" data-toggle="validator">
+                {% csrf_token %}
+				<div class="form-group">
+					<label for="firstname" class="control-label">First Name:</label>
+					<input type="text" class="form-control" id="firstname" placeholder="First Name" data-error="Enter Your First Name" name="t1" required>
+					<div class="help-block with-errors"></div>
+				</div>
+				<div class="form-group">
+					<label for="lastname" class="control-label">Last Name:</label>
+					<input type="text" class="form-control" id="lastname" placeholder="Last Name" data-error="Enter Your Last Name"name="t2" required>
+					<div class="help-block with-errors"></div>
+				</div>
+				<div class="form-group">
+					<label for="inputEmail" class="control-label">Email:</label>
+					<input type="email" class="form-control" id="inputEmail" placeholder="Email" data-error="This email address is invalid" name="t3" required>
+					<div class="help-block with-errors"></div>
+				</div>
+				<div class="form-group">
+					<label for="Phone" class="control-label">Phone:</label>
+					<input type="text" class="form-control" id="Phone" placeholder="Phone" data-error="Enter Your Phone Number" name="t4" required>
+					<div class="help-block with-errors"></div>
+                    <div class="form-group">
+					<label for="Phone" class="control-label">Class:</label>
+					<input type="text" class="form-control" id="Class" placeholder="Class" data-error="Enter Your Class Name"  name="t5" required>
+					<div class="help-block with-errors"></div>
+				</div>
+				<div class="form-group">
+					<label for="inputPassword" class="control-label">Password:</label>
+					<div class="form-inline row">
+						<div class="form-group col-sm-6 agileits-w3layouts">
+							<input type="password" data-minlength="6" class="form-control" id="inputPassword" placeholder="Password"  name="t6" required>
+							<div class="help-block">Minimum of 6 characters</div>
+						</div>
+						<div class="form-group col-sm-6 w3-agile">
+							<input type="password" class="form-control" id="inputPasswordConfirm" data-match="#inputPassword" data-match-error="Whoops, these don't match" name="t7"
+							    placeholder="Confirm Password" required>
+							<div class="help-block with-errors"></div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group w3ls-opt">
+					<label for="Phone" class="control-label">Gender</label>
+
+					<label class="w3layouts">
+						<input type="radio" name="work" id="hire" value="male" checked>Male
+					</label>
+					<label class="w3layouts label2">
+						<input type="radio" name="work" id="work" value="female">Female
+					</label>
+				</div>
+				<div class="form-group">
+					<button type="submit" class="btn btn-lg">submit</button>
+				</div>
+
+                    <div class="form-group">
+					<button type="submit" class="btn btn-lg"><a href="/views/">ViewDetails</a></button>
+				</div>
+                     <h1 style="background: #5bc0de" align="CENTER">{{ m1 }}</h1>
+                </div>
+			</form>
+		</div>
+		<div class="right"></div>
+		<div class="clear"></div>
+	</div>
+	<p class="copyright-w3ls">© 2017 Student Registration Form. All Rights Reserved | Design by
+		<a href="https://google.com/" target="_blank">mahesh</a>
+	</p>
+	<!-- js -->
+	<script src="{% static 'mahi/js/jquery-2.1.4.min.js' %}"></script>
+	<!-- //js -->
+
+	<script src="{% static 'mahi/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'mahi/js/validator.min.js' %}"></script>
+	<!-- /js files -->
+
+
+</body>
+
+</html>

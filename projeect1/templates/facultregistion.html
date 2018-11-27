@@ -1,0 +1,146 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!doctype html>
+<html>
+
+<head>
+	<title>Facult Registration Form Flat Responsive widget Template :: w3layouts</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Student Registration Form Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design"
+	/>
+
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- fonts -->
+	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
+	<!-- /fonts -->
+	<!-- css -->
+    {% load staticfiles %}
+	<link href="{% static 'mahef/css/bootstrap.css' %}" rel="stylesheet" type='text/css' media="all" />
+	<link href="{% static 'mahef/css/style.css' %}" rel="stylesheet" type='text/css' media="all" />
+	<!-- /css -->
+</head>
+
+
+<body style="background:url({% static "mahef/images/SSN1.jpg" %}" >
+{#<table align="right" border="2" style="width: 500px" bgcolor="#7fff00">#}
+{#    <tr>#}
+{#        <td><a href="/register/"><h3 style="background:#fb0000" align="center">Home</h3></a> </td>#}
+{#        <td><a href="/maheshg/"><h3 style="background: #fb0000" align="center"> Faculty</h3></a></td>#}
+{#        <td><a href=""><h3 style="background: #fb0000" align="center"> Marks</h3></a></td>#}
+{#    </tr>#}
+{#</table#}
+<table align="right"border="2">
+        <tr>
+            <td style="width: 170px" bgcolor="#dc143c"><a href="/viewsfaculty/"><h1>Faculty Details</h1></a> </td>
+            <td style="width: 100px"bgcolor="#dc143c" ><a href="/views/"><h1>Students List</h1></a></td>
+            <td style="width: 100px" bgcolor="#dc143c"><a href="/mahesh/"><h1> Faculty</h1></a></td>
+            <td style="width: 170px" bgcolor="#dc143c"><a href=""><h1>Faculty Registion Form</h1></a> </td>
+            <td style="width: 170px" bgcolor="#dc143c"><a href="/maheshg/"><h1>LogOut</h1></a> </td>
+        </tr>
+    </table>
+	<div class="content-agileits">
+		<h1 class="title">Faculty registration Form</h1>
+		<div class="left">
+			<form action="/maheshfaculty/" method="post" data-toggle="validator">
+                {% csrf_token %}
+				<div class="form-group">
+					<label for="firstname" class="control-label">First Name:</label>
+					<input type="text" class="form-control" id="firstname" placeholder="First Name" data-error="Enter Your First Name" name="t1" required>
+					<div class="help-block with-errors"></div>
+				</div>
+				<div class="form-group">
+					<label for="lastname" class="control-label">Last Name:</label>
+					<input type="text" class="form-control" id="lastname" placeholder="Last Name" data-error="Enter Your Last Name"name="t2" required>
+					<div class="help-block with-errors"></div>
+				</div>
+				<div class="form-group">
+					<label for="inputEmail" class="control-label">Email:</label>
+					<input type="email" class="form-control" id="inputEmail" placeholder="Email" data-error="This email address is invalid" name="t3" required>
+					<div class="help-block with-errors"></div>
+				</div>
+				<div class="form-group">
+					<label for="Phone" class="control-label">Phone:</label>
+					<input type="text" class="form-control" id="Phone" placeholder="Phone" data-error="Enter Your Phone Number" name="t4" required>
+					<div class="help-block with-errors"></div>
+                    <div class="form-group">
+                          <div class="form-group w3ls-opt">
+					<label for="Phone" class="control-label">Subject</label>
+
+					<label class="w3layouts">
+						<input type="checkbox" name="t5" id="hire" value="Engish" checked>English
+					</label>
+					<label class="w3layouts label2">
+						<input type="checkbox" name="t5" id="work" value="Telugu">Telugu
+					</label>
+				</div>
+					<label for="Phone" class="control-label">Class:</label>
+					<input type="text" class="form-control" id="Class" placeholder="Class" data-error="Enter Your Class Name"  name="t6" required>
+					<div class="help-block with-errors"></div>
+				</div>
+				<div class="form-group">
+					<label for="inputPassword" class="control-label">Password:</label>
+					<div class="form-inline row">
+						<div class="form-group col-sm-6 agileits-w3layouts">
+							<input type="password" data-minlength="6" class="form-control" id="inputPassword" placeholder="Password"  name="t7" required>
+							<div class="help-block">Minimum of 6 characters</div>
+						</div>
+						<div class="form-group col-sm-6 w3-agile">
+							<input type="password" class="form-control" id="inputPasswordConfirm" data-match="#inputPassword" data-match-error="Whoops, these don't match" name="t8"
+							    placeholder="Confirm Password" required>
+							<div class="help-block with-errors"></div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group w3ls-opt">
+					<label for="Phone" class="control-label">Gender</label>
+
+					<label class="w3layouts">
+						<input type="radio" name="work" id="hire" value="male" checked>Male
+					</label>
+					<label class="w3layouts label2">
+						<input type="radio" name="work" id="work" value="female">Female
+					</label>
+				</div>
+				<div class="form-group">
+					<button type="submit" class="btn btn-lg">submit</button>
+				</div>
+
+                    <div class="form-group">
+					<button type="submit" class="btn btn-lg"><a href="/viewsfaculty/">ViewDetails</a></button>
+				</div>
+                     <h1 style="background: #890f0a">{{ m1 }}</h1>
+                </div>
+			</form>
+		</div>
+		<div class="right"></div>
+		<div class="clear"></div>
+	</div>
+	<p class="copyright-w3ls">© 2017 Student Registration Form. All Rights Reserved | Design by
+		<a href="https://google.com/" target="_blank">mahesh</a>
+	</p>
+	<!-- js -->
+	<script src="{% static 'mahef/js/jquery-2.1.4.min.js' %}"></script>
+	<!-- //js -->
+
+	<script src="{% static 'mahef/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'mahef/js/validator.min.js' %}"></script>
+	<!-- /js files -->
+
+
+</body>
+
+</html>

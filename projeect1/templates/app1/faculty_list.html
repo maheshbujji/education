@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+{% load staticfiles %}
+ <body style="background:url({% static "mahef/images/faculty.jpeg" %}" >
+ <tr>
+        <td><a href="/register/"><h5 style="background:#fb0000" align="center">Home</h5></a> </td>
+        <td><a href="/maheshg/"><h5 style="background: #fb0000" align="center"> Faculty</h5></a></td>
+        <td><a href=""><h3 style="background: #fb0000" align="center"> Marks</h3></a></td>
+    </tr>
+<table align="center" border="2" bgcolor="#7fff00">
+
+
+
+<table align="center" border="2">
+    <tr>
+        <td bgcolor="#7fff00">Fast Name</td>
+        <td bgcolor="#ffd700">Lastt Name</td>
+        <td bgcolor="#00ced1">Emasil Id:</td>
+        <td bgcolor="#7fff00">Phone No:</td>
+        <td bgcolor="#7fff00">Subjects Name:</td>
+        <td bgcolor="#daa520">Class</td>
+        <td bgcolor="#faebd7">User Password</td>
+        <td bgcolor="#faebd7">Gender</td>
+        <td bgcolor="#f5f5dc">Delete</td>
+        <td bgcolor="#ffebcd">Uptade</td>
+    </tr>
+
+
+{% for x in object_list %}
+    <tr bgcolor="#7fff00">
+     <td>{{ x.fname }}</td>
+    <td>{{ x.lname }}</td>
+        <td>{{ x.email }}</td>
+        <td>{{ x.cno }}</td>
+
+
+    <td>{{ x.subject }}</td>
+    <td>{{ x.clas }}</td>
+    <td>{{ x.upass }}</td>
+     <td>{{ x.gender }}</td>
+     <td>Delete</td>
+     <td>update</td>
+
+
+    </tr>
+
+{% endfor %}
+</table>
+</body>
+</html>

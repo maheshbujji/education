@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+{% load staticfiles %}
+<body style="background:url({% static "book/book.jpg" %}" >
+<table align="right" border="1" style="width: 500px" bgcolor="#7fff00">
+    <tr>
+        <td><a href="/register/"><h5 style="background:#fb0000" align="center">Home</h5></a> </td>
+        <td><a href="/maheshg/"><h5 style="background: #fb0000" align="center"> Faculty</h5></a></td>
+        <td><a href=""><h3 style="background: #fb0000" align="center"> Marks</h3></a></td>
+    </tr>
+</table>
+
+
+
+
+
+
+
+
+
+<h1 align="center">hi mahesh</h1>
+
+    <form method="post" class="post_form" enctype="multipart/form-data" action="/maa/">
+        {% csrf_token %}
+        <table align="center" border="2">
+        <tr>
+            <td>        {{ form.as_p }}
+</td>
+        </tr>
+<tr>
+    <td align="center">
+                <button type="submit" class="save  btn btn_default">save</button>
+
+    </td>
+</tr>
+        {{ mesg }}
+        </table>
+    </form>
+<table border="3" align="center">
+    {% for x in value %}
+    <tr>
+        <td>{{ x.sno }}</td>
+        <td>{{ x.name }}</td>
+        <td>{{ x.cno }}</td>
+        <td>{{ x.path }}</td>
+        {% load staticfiles %}
+        <td><img src="{% static '' %}{{x.path}}" width="100" height=""></td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% if booklist %}
+            <table align="center" border="1">
+            <tr>
+                <td>Book No</td>
+                <td>Book Name</td>
+                <td>Download</td>
+            </tr>
+
+    {% for x in booklist %}
+        <tr>
+        <td>{{ x.Bookname }}</td>
+        <td>{{ x.BookNo }}</td>
+            {% load staticfiles %}
+        <td><a href="{% static 'upload/' %}{{ x.file }}" download>Download</a> </td>
+        </tr>
+    {% endfor %}
+                </table>
+
+    {% else %}
+    <h1>
+    No Books Are Available
+    </h1>
+{% endif %}
+</body>
+</html>
